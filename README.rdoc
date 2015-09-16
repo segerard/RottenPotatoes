@@ -1,28 +1,50 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This directory contains the basic Rotten Potatoes rails app that we will use
+and enhance througout the semester.
 
-Things you may want to cover:
+You can copy this directory to your Cloud9 wokspace by first forking the SELT/RottenPotatoes
+GitHub repo to your GitHub account and then cloning it to your Cloud9 workspace.  You do NOT
+need to make your GitHub repo private.
 
-* Ruby version
+Before running the app, change into the top-level directory--i.e. the one 
+containing this README file--and enter the following commands to install gems
+and set up and initialize the database  (You only need to do this before running
+the app for the first time:
 
-* System dependencies
+bundle install
+rake db:create
+rake db:migrate
+rake db:seed
 
-* Configuration
+Now you are ready to try out the app.  Enter the following
+command to start the rails server:
 
-* Database creation
+rails server -p $PORT -b $IP
 
-* Database initialization
+(If you are running the app in an environment other than our class CLoud9 workspace,
+the command for starting the rails server might be slightly diccerent)
 
-* How to run the test suite
+After the server has started, you should see a small window that says:
 
-* Services (job queues, cache servers, search engines, etc.)
+"Your code is running at <some URL ending in C9>"
 
-* Deployment instructions
+You can either click on the URL to open a small browser within Cloud9, or
+type the supplied URL into your favorite browser.
 
-* ...
+In either case, the browser should be directed to a rails "Welcome Aboard" page.
+Add:
 
+"/movies"  (without the quotes) 
 
-Please feel free to use a different markup language if you do not plan to run
+to the end of the URL and the browser should
+display the Rotten Potatoes homepage--i.e. the one that shows a table of all the
+movies.
+
+When you are done using the app, you can kill the rails server by typing:
+
+Ctrl-c
+
+Have fun.
+
 <tt>rake doc:app</tt>.
