@@ -1,4 +1,4 @@
-== README
+=begin rdoc
 
 This directory contains the basic Rotten Potatoes rails app that we will use
 and enhance througout the semester.
@@ -50,4 +50,4 @@ Ctrl-c
 
 Have fun.
 
-<tt>rake doc:app</tt>.
+=end
