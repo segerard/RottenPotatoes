@@ -10,7 +10,7 @@
     %h1.title Rotten Potatoes!
     #main
       - if flash[:notice]
-        #notice.message= flash[:notice]
+        #notice.flash_message= flash[:notice]
       - elsif flash[:warning]
         #warning.message= flash[:warning]
       - if(!@current_user)
