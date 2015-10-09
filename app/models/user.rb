@@ -1,8 +1,9 @@
+require 'securerandom'
 class User < ActiveRecord::Base
   def self.create_user! (parameters) 
- if(User.exists?(:user_id => parameters['user']['user_id'])==false)  
-     parameters['user']['session_token']="123"
-     @user = User.create!(parameters[:user])
+   if(!User.find_by_user_id(parameters[:user_id]))  
+     parameters[:session_token]=SecureRandom.base64
+     @user = User.create!(parameters)
    end
  end
 
